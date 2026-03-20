@@ -1,0 +1,253 @@
+#SixNations
+
+Six Nations Fan Website
+
+⸻
+
+1. Introduction
+
+1.1 Purpose
+
+This document defines the functional and non-functional requirements for a web-based platform dedicated to fans of the Six Nations Championship. It is intended for developers, designers, stakeholders, and project managers.
+
+1.2 Scope
+
+The system will provide:
+	•	Tournament information (fixtures, results, standings)
+	•	Team and player profiles
+	•	News and editorial content
+	•	Fan interaction features (comments, discussions)
+
+The system will not initially include:
+	•	Live video streaming
+	•	Ticketing or e-commerce
+	•	Real-time betting integrations
+
+1.3 Definitions
+	•	Six Nations: Annual rugby union competition between England, France, Ireland, Italy, Scotland, and Wales
+	•	User: Any visitor or registered member of the website
+	•	Admin: Authorized user managing content and users
+
+⸻
+
+2. Overall Description
+
+2.1 Product Perspective
+
+The system is a standalone web application accessible via browsers on desktop and mobile devices. It may integrate with third-party sports data APIs.
+
+2.2 Product Functions
+
+High-level capabilities:
+	•	Display fixtures, results, and standings
+	•	Publish and manage news articles
+	•	Provide team and player information
+	•	Enable user registration and interaction
+	•	Admin content management
+
+2.3 User Classes and Characteristics
+
+User Type	Description
+Visitor	Unregistered user browsing content
+Registered User	Can comment, personalize experience
+Moderator	Reviews and manages user content
+Admin/Editor	Manages site content and data
+
+2.4 Operating Environment
+	•	Web browsers (Chrome, Safari, Firefox, Edge)
+	•	Mobile and tablet devices (responsive UI)
+	•	Backend server (cloud-based recommended)
+
+2.5 Constraints
+	•	Must comply with GDPR for user data
+	•	Dependent on availability of match data sources
+	•	Performance must scale for match-day traffic spikes
+
+2.6 Assumptions
+	•	Users have internet access
+	•	Initial version is English-only
+	•	Data accuracy depends on admin or API reliability
+
+⸻
+
+3. System Features & Functional Requirements
+
+3.1 Homepage
+
+Description: Central hub for key content
+
+Requirements:
+	•	The system shall display upcoming fixtures on the homepage
+	•	The system shall display latest news articles
+	•	The system shall highlight current standings
+	•	The system shall provide quick navigation to major sections
+
+⸻
+
+3.2 Fixtures and Results
+
+Requirements:
+	•	The system shall display a list of fixtures by round and date
+	•	The system shall display match results after completion
+	•	The system shall allow users to filter matches by team
+	•	The system shall display match details (teams, score, venue, date, time)
+	•	The system shall support both upcoming and historical matches
+
+⸻
+
+3.3 Standings
+
+Requirements:
+	•	The system shall display a tournament table including:
+	•	Matches played
+	•	Wins, losses, draws
+	•	Points difference
+	•	Total points
+	•	The system shall update standings dynamically when results change
+
+⸻
+
+3.4 Teams and Players
+
+Requirements:
+	•	The system shall provide a dedicated page for each team
+	•	The system shall display team information (history, coach, squad)
+	•	The system shall provide player profile pages
+	•	The system shall display player statistics where available
+
+⸻
+
+3.5 News and Content
+
+Requirements:
+	•	The system shall display a list of news articles
+	•	The system shall allow users to view full article pages
+	•	The system shall categorize articles (e.g., match preview, analysis)
+	•	The system shall allow filtering articles by team
+
+⸻
+
+3.6 User Accounts
+
+Requirements:
+	•	The system shall allow users to register with email and password
+	•	The system shall allow users to log in and log out securely
+	•	The system shall allow users to edit their profile
+	•	The system shall allow users to select a favorite team
+
+⸻
+
+3.7 Comments and Community
+
+Requirements:
+	•	The system shall allow registered users to comment on articles
+	•	The system shall allow users to edit or delete their own comments
+	•	The system shall allow moderators to remove inappropriate content
+	•	The system shall support reporting of comments
+
+⸻
+
+3.8 Search and Navigation
+
+Requirements:
+	•	The system shall provide a global search feature
+	•	The system shall allow users to search for teams, players, and articles
+	•	The system shall provide clear navigation menus across all pages
+
+⸻
+
+3.9 Admin Panel
+
+Requirements:
+	•	The system shall allow admins to create, edit, and delete articles
+	•	The system shall allow admins to manage fixtures and results
+	•	The system shall allow admins to update standings manually if needed
+	•	The system shall allow admins to manage users and roles
+	•	The system shall allow moderators to review flagged content
+
+⸻
+
+3.10 Notifications (Optional / Phase 2)
+
+Requirements:
+	•	The system shall allow users to subscribe to notifications
+	•	The system shall send match reminders via email
+	•	The system shall notify users of updates related to their favorite team
+
+⸻
+
+4. Non-Functional Requirements
+
+4.1 Performance
+	•	The system shall load key pages within 2 seconds under normal conditions
+	•	The system shall support high traffic during match days
+
+4.2 Availability
+	•	The system shall achieve 99.5% uptime during tournament periods
+
+4.3 Usability
+	•	The system shall provide a responsive design for all devices
+	•	The system shall ensure intuitive navigation and layout
+
+4.4 Accessibility
+	•	The system shall comply with WCAG 2.1 accessibility guidelines
+	•	The system shall support keyboard navigation
+	•	The system shall provide alt text for images
+
+4.5 Security
+	•	The system shall encrypt user passwords
+	•	The system shall use HTTPS for all communications
+	•	The system shall protect against common vulnerabilities (e.g., XSS, CSRF)
+
+4.6 Maintainability
+	•	The system shall be modular and support future feature expansion
+	•	The system shall allow non-technical admins to manage content
+
+⸻
+
+5. Data Requirements
+
+5.1 Entities
+	•	Users
+	•	Teams
+	•	Players
+	•	Matches
+	•	Results
+	•	Standings
+	•	Articles
+	•	Comments
+
+5.2 Data Sources
+	•	Admin input
+	•	Optional third-party sports APIs
+
+⸻
+
+6. User Interface Requirements
+	•	Clean, modern sports-oriented design
+	•	Mobile-first responsive layout
+	•	Consistent navigation across all pages
+	•	Clear typography and readable content
+	•	Team branding (colors, logos where permitted)
+
+⸻
+
+7. Acceptance Criteria
+	•	Users can access fixtures, results, and standings without login
+	•	Admins can successfully create and publish articles
+	•	Registered users can comment on content
+	•	The site functions correctly on mobile devices
+	•	Pages meet defined performance thresholds
+
+⸻
+
+8. Future Enhancements
+	•	Live match tracking
+	•	Fantasy league integration
+	•	Polls and predictions
+	•	Multi-language support
+	•	Personalized dashboards
+	•	Mobile app version
+
+⸻
+
