@@ -1,15 +1,281 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script defer src="/assets/js/main.js"></script>
-  </head>
-  <body>
-    <h1>It works 🎉</h1>
-    <p>This site is deployed using Cloudflare Pages.</p>
-    <p><a href="/about/">About</a></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Six Nations 2026</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">Six Nations <span>2026</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">☰</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="/" class="nav__link active">Home</a></li>
+        <li><a href="/fixtures/" class="nav__link">Fixtures</a></li>
+        <li><a href="/standings/" class="nav__link">Standings</a></li>
+        <li><a href="/teams/" class="nav__link">Teams</a></li>
+        <li><a href="/news/" class="nav__link">News</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">Six Nations Championship 2026</span>
+      <h1 class="hero__title">Ireland claim the<br>Grand Slam</h1>
+      <p class="hero__subtitle">A perfect five-from-five campaign sees Ireland crowned champions of the 2026 Six Nations.</p>
+      <div class="hero__cta">
+        <a href="/standings/" class="btn btn--primary">Final Standings</a>
+        <a href="/fixtures/" class="btn btn--outline">All Results</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <div class="stats-bar">
+    <div class="container stats-bar__inner">
+      <div class="stat-item">
+        <div class="stat-item__value">15</div>
+        <div class="stat-item__label">Matches Played</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">5</div>
+        <div class="stat-item__label">Ireland Wins</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">142</div>
+        <div class="stat-item__label">Points For (IRE)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">1st</div>
+        <div class="stat-item__label">Grand Slam Since 2018</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div class="container">
+
+      <!-- Champion Banner -->
+      <div class="champion-banner">
+        <div class="champion-banner__icon">🏆</div>
+        <div>
+          <div class="champion-banner__title">2026 Six Nations Champions — Ireland</div>
+          <div class="champion-banner__text">Ireland secured the Grand Slam with a 27–25 victory over France in Paris on 14 March 2026, completing an unbeaten campaign.</div>
+        </div>
+      </div>
+
+      <div class="home-grid">
+
+        <!-- Standings Preview -->
+        <div>
+          <div class="section-heading-row">
+            <h2>Final Standings</h2>
+            <a href="/standings/" class="view-all">Full table →</a>
+          </div>
+          <div class="standings-table-wrap">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th>W</th>
+                  <th>L</th>
+                  <th class="hide-mobile">PD</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pos pos--1">1</td>
+                  <td>
+                    <div class="team-row">
+                      <div class="team-badge-sm badge--ireland">IRE</div>
+                      Ireland
+                      <span class="champion-badge">Grand Slam</span>
+                    </div>
+                  </td>
+                  <td>5</td><td>0</td>
+                  <td class="pd--pos hide-mobile">+48</td>
+                  <td class="pts">20</td>
+                </tr>
+                <tr>
+                  <td class="pos">2</td>
+                  <td><div class="team-row"><div class="team-badge-sm badge--england">ENG</div>England</div></td>
+                  <td>4</td><td>1</td>
+                  <td class="pd--pos hide-mobile">+35</td>
+                  <td class="pts">16</td>
+                </tr>
+                <tr>
+                  <td class="pos">3</td>
+                  <td><div class="team-row"><div class="team-badge-sm badge--france">FRA</div>France</div></td>
+                  <td>2</td><td>3</td>
+                  <td class="pd--neg hide-mobile">−4</td>
+                  <td class="pts">8</td>
+                </tr>
+                <tr>
+                  <td class="pos">4</td>
+                  <td><div class="team-row"><div class="team-badge-sm badge--scotland">SCO</div>Scotland</div></td>
+                  <td>2</td><td>3</td>
+                  <td class="pd--neg hide-mobile">−21</td>
+                  <td class="pts">8</td>
+                </tr>
+                <tr>
+                  <td class="pos">5</td>
+                  <td><div class="team-row"><div class="team-badge-sm badge--wales">WAL</div>Wales</div></td>
+                  <td>1</td><td>4</td>
+                  <td class="pd--neg hide-mobile">−8</td>
+                  <td class="pts">4</td>
+                </tr>
+                <tr>
+                  <td class="pos">6</td>
+                  <td><div class="team-row"><div class="team-badge-sm badge--italy">ITA</div>Italy</div></td>
+                  <td>1</td><td>4</td>
+                  <td class="pd--neg hide-mobile">−50</td>
+                  <td class="pts">4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Latest Results -->
+        <div>
+          <div class="section-heading-row">
+            <h2>Round 5 Results</h2>
+            <a href="/fixtures/" class="view-all">All fixtures →</a>
+          </div>
+          <div class="fixtures-list">
+
+            <div class="match-card">
+              <div class="match-card__meta">
+                14 Mar 2026 <span class="match-card__meta-dot">·</span> Murrayfield, Edinburgh
+              </div>
+              <div class="match-teams">
+                <div class="team-col">
+                  <div class="team-badge badge--scotland">SCO</div>
+                  <span class="team-name-text">Scotland</span>
+                  <span class="team-score">14</span>
+                </div>
+                <div class="match-separator">
+                  <span class="match-separator__vs">vs</span>
+                  <span class="match-status status--ft">FT</span>
+                </div>
+                <div class="team-col team-col--away">
+                  <div class="team-badge badge--italy">ITA</div>
+                  <span class="team-name-text">Italy</span>
+                  <span class="team-score">21</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-card__meta">
+                14 Mar 2026 <span class="match-card__meta-dot">·</span> Twickenham, London
+              </div>
+              <div class="match-teams">
+                <div class="team-col">
+                  <div class="team-badge badge--england">ENG</div>
+                  <span class="team-name-text">England</span>
+                  <span class="team-score">22</span>
+                </div>
+                <div class="match-separator">
+                  <span class="match-separator__vs">vs</span>
+                  <span class="match-status status--ft">FT</span>
+                </div>
+                <div class="team-col team-col--away">
+                  <div class="team-badge badge--wales">WAL</div>
+                  <span class="team-name-text">Wales</span>
+                  <span class="team-score">17</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-card__meta">
+                14 Mar 2026 <span class="match-card__meta-dot">·</span> Stade de France, Paris
+              </div>
+              <div class="match-teams">
+                <div class="team-col">
+                  <div class="team-badge badge--france">FRA</div>
+                  <span class="team-name-text">France</span>
+                  <span class="team-score">25</span>
+                </div>
+                <div class="match-separator">
+                  <span class="match-separator__vs">vs</span>
+                  <span class="match-status status--ft">FT</span>
+                </div>
+                <div class="team-col team-col--away">
+                  <div class="team-badge badge--ireland">IRE</div>
+                  <span class="team-name-text">Ireland</span>
+                  <span class="team-score">27</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.home-grid -->
+
+      <!-- News Preview -->
+      <div style="margin-top: 3rem;">
+        <div class="section-heading-row">
+          <h2>Latest News</h2>
+          <a href="/news/" class="view-all">All news →</a>
+        </div>
+        <div class="news-grid">
+
+          <article class="news-card">
+            <span class="news-card__tag tag--report">Match Report</span>
+            <h3 class="news-card__title">Ireland seal Grand Slam with last-gasp win over France</h3>
+            <p class="news-card__excerpt">A stunning performance in Paris secured a historic Grand Slam for Andy Farrell's side, who kept their nerve in a pulsating finale.</p>
+            <div class="news-card__footer">
+              <span class="news-card__date">15 Mar 2026</span>
+              <a href="/news/" class="news-card__link">Read more →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <span class="news-card__tag tag--report">Match Report</span>
+            <h3 class="news-card__title">England's dominant display secures runners-up finish</h3>
+            <p class="news-card__excerpt">England rounded off their tournament in style, crossing for five tries against Wales to confirm second place in the final standings.</p>
+            <div class="news-card__footer">
+              <span class="news-card__date">15 Mar 2026</span>
+              <a href="/news/" class="news-card__link">Read more →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <span class="news-card__tag tag--analysis">Analysis</span>
+            <h3 class="news-card__title">2026 Six Nations: Five players of the tournament</h3>
+            <p class="news-card__excerpt">From Ireland's talismanic fly-half to England's barnstorming back row, we pick the standout performers of a thrilling championship.</p>
+            <div class="news-card__footer">
+              <span class="news-card__date">16 Mar 2026</span>
+              <a href="/news/" class="news-card__link">Read more →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Six Nations 2026 · Fan Website</p>
+      <p>Not affiliated with <a href="#">Six Nations Rugby Ltd</a>. For informational purposes only.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
